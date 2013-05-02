@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD7B8AB81732918000B4BC44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8AB71732918000B4BC44 /* UIKit.framework */; };
+		AD7B8ABA1732918000B4BC44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8AB91732918000B4BC44 /* Foundation.framework */; };
+		AD7B8ABC1732918000B4BC44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8ABB1732918000B4BC44 /* CoreGraphics.framework */; };
+		AD7B8AC21732918000B4BC44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AC01732918000B4BC44 /* InfoPlist.strings */; };
+		AD7B8AC41732918000B4BC44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8AC31732918000B4BC44 /* main.m */; };
+		AD7B8AC81732918000B4BC44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8AC71732918000B4BC44 /* AppDelegate.m */; };
+		AD7B8ACA1732918000B4BC44 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AC91732918000B4BC44 /* Default.png */; };
+		AD7B8ACC1732918000B4BC44 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8ACB1732918000B4BC44 /* Default@2x.png */; };
+		AD7B8ACE1732918000B4BC44 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8ACD1732918000B4BC44 /* Default-568h@2x.png */; };
+		AD7B8AD11732918000B4BC44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8AD01732918000B4BC44 /* ViewController.m */; };
+		AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */; };
+		AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */; };
+		AD7B8AE0173291CD00B4BC44 /* UIImageViewModeScaleAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */; };
+		AD7B8AE21732944800B4BC44 /* becomeapanda_tumblr_com.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AD7B8AB41732918000B4BC44 /* UIImageViewModeScaleAspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageViewModeScaleAspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7B8AB71732918000B4BC44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AD7B8AB91732918000B4BC44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD7B8ABB1732918000B4BC44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD7B8ABF1732918000B4BC44 /* UIImageViewModeScaleAspect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIImageViewModeScaleAspect-Info.plist"; sourceTree = "<group>"; };
+		AD7B8AC11732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD7B8AC31732918000B4BC44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD7B8AC51732918000B4BC44 /* UIImageViewModeScaleAspect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageViewModeScaleAspect-Prefix.pch"; sourceTree = "<group>"; };
+		AD7B8AC61732918000B4BC44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD7B8AC71732918000B4BC44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD7B8AC91732918000B4BC44 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AD7B8ACB1732918000B4BC44 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AD7B8ACD1732918000B4BC44 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AD7B8ACF1732918000B4BC44 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD7B8AD01732918000B4BC44 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD7B8AD31732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		AD7B8AD61732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		AD7B8ADE173291CD00B4BC44 /* UIImageViewModeScaleAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewModeScaleAspect.h; sourceTree = "<group>"; };
+		AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewModeScaleAspect.m; sourceTree = "<group>"; };
+		AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = becomeapanda_tumblr_com.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD7B8AB11732918000B4BC44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7B8AB81732918000B4BC44 /* UIKit.framework in Frameworks */,
+				AD7B8ABA1732918000B4BC44 /* Foundation.framework in Frameworks */,
+				AD7B8ABC1732918000B4BC44 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD7B8AAB1732918000B4BC44 = {
+			isa = PBXGroup;
+			children = (
+				AD7B8ABD1732918000B4BC44 /* UIImageViewModeScaleAspect */,
+				AD7B8AB61732918000B4BC44 /* Frameworks */,
+				AD7B8AB51732918000B4BC44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD7B8AB51732918000B4BC44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B8AB41732918000B4BC44 /* UIImageViewModeScaleAspect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD7B8AB61732918000B4BC44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B8AB71732918000B4BC44 /* UIKit.framework */,
+				AD7B8AB91732918000B4BC44 /* Foundation.framework */,
+				AD7B8ABB1732918000B4BC44 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD7B8ABD1732918000B4BC44 /* UIImageViewModeScaleAspect */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B8AC61732918000B4BC44 /* AppDelegate.h */,
+				AD7B8AC71732918000B4BC44 /* AppDelegate.m */,
+				AD7B8ACF1732918000B4BC44 /* ViewController.h */,
+				AD7B8AD01732918000B4BC44 /* ViewController.m */,
+				AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */,
+				AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */,
+				AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */,
+				AD7B8ADD173291CD00B4BC44 /* UIImageViewModeScaleAspect */,
+				AD7B8ABE1732918000B4BC44 /* Supporting Files */,
+			);
+			path = UIImageViewModeScaleAspect;
+			sourceTree = "<group>";
+		};
+		AD7B8ABE1732918000B4BC44 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B8ABF1732918000B4BC44 /* UIImageViewModeScaleAspect-Info.plist */,
+				AD7B8AC01732918000B4BC44 /* InfoPlist.strings */,
+				AD7B8AC31732918000B4BC44 /* main.m */,
+				AD7B8AC51732918000B4BC44 /* UIImageViewModeScaleAspect-Prefix.pch */,
+				AD7B8AC91732918000B4BC44 /* Default.png */,
+				AD7B8ACB1732918000B4BC44 /* Default@2x.png */,
+				AD7B8ACD1732918000B4BC44 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD7B8ADD173291CD00B4BC44 /* UIImageViewModeScaleAspect */ = {
+			isa = PBXGroup;
+			children = (
+				AD7B8ADE173291CD00B4BC44 /* UIImageViewModeScaleAspect.h */,
+				AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */,
+			);
+			name = UIImageViewModeScaleAspect;
+			path = ../../../UIImageViewModeScaleAspect;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD7B8AB31732918000B4BC44 /* UIImageViewModeScaleAspect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD7B8ADA1732918000B4BC44 /* Build configuration list for PBXNativeTarget "UIImageViewModeScaleAspect" */;
+			buildPhases = (
+				AD7B8AB01732918000B4BC44 /* Sources */,
+				AD7B8AB11732918000B4BC44 /* Frameworks */,
+				AD7B8AB21732918000B4BC44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIImageViewModeScaleAspect;
+			productName = UIImageViewModeScaleAspect;
+			productReference = AD7B8AB41732918000B4BC44 /* UIImageViewModeScaleAspect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD7B8AAC1732918000B4BC44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Vivien Cormier";
+			};
+			buildConfigurationList = AD7B8AAF1732918000B4BC44 /* Build configuration list for PBXProject "UIImageViewModeScaleAspect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD7B8AAB1732918000B4BC44;
+			productRefGroup = AD7B8AB51732918000B4BC44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD7B8AB31732918000B4BC44 /* UIImageViewModeScaleAspect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD7B8AB21732918000B4BC44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7B8AC21732918000B4BC44 /* InfoPlist.strings in Resources */,
+				AD7B8ACA1732918000B4BC44 /* Default.png in Resources */,
+				AD7B8ACC1732918000B4BC44 /* Default@2x.png in Resources */,
+				AD7B8ACE1732918000B4BC44 /* Default-568h@2x.png in Resources */,
+				AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */,
+				AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */,
+				AD7B8AE21732944800B4BC44 /* becomeapanda_tumblr_com.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD7B8AB01732918000B4BC44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7B8AC41732918000B4BC44 /* main.m in Sources */,
+				AD7B8AC81732918000B4BC44 /* AppDelegate.m in Sources */,
+				AD7B8AD11732918000B4BC44 /* ViewController.m in Sources */,
+				AD7B8AE0173291CD00B4BC44 /* UIImageViewModeScaleAspect.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AD7B8AC01732918000B4BC44 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD7B8AC11732918000B4BC44 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD7B8AD31732918000B4BC44 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD7B8AD61732918000B4BC44 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD7B8AD81732918000B4BC44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD7B8AD91732918000B4BC44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD7B8ADB1732918000B4BC44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIImageViewModeScaleAspect/UIImageViewModeScaleAspect-Prefix.pch";
+				INFOPLIST_FILE = "UIImageViewModeScaleAspect/UIImageViewModeScaleAspect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AD7B8ADC1732918000B4BC44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIImageViewModeScaleAspect/UIImageViewModeScaleAspect-Prefix.pch";
+				INFOPLIST_FILE = "UIImageViewModeScaleAspect/UIImageViewModeScaleAspect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD7B8AAF1732918000B4BC44 /* Build configuration list for PBXProject "UIImageViewModeScaleAspect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7B8AD81732918000B4BC44 /* Debug */,
+				AD7B8AD91732918000B4BC44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD7B8ADA1732918000B4BC44 /* Build configuration list for PBXNativeTarget "UIImageViewModeScaleAspect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7B8ADB1732918000B4BC44 /* Debug */,
+				AD7B8ADC1732918000B4BC44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD7B8AAC1732918000B4BC44 /* Project object */;
+}

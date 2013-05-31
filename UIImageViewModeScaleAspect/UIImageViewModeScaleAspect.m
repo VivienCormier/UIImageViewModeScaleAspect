@@ -17,8 +17,8 @@
     self = [super init];
     if (self) {
         
-        img                    = [[UIImageView alloc]init];
-        img.autoresizingMask   = UIViewContentModeCenter;
+        img             = [[UIImageView alloc]init];
+        img.contentMode = UIViewContentModeCenter;
         [self addSubview:img];
         
         self.clipsToBounds = YES;
@@ -30,8 +30,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        img                    = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        img.autoresizingMask   = UIViewContentModeCenter;
+        img             = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        img.contentMode = UIViewContentModeCenter;
         [self addSubview:img];
         
         self.clipsToBounds = YES;

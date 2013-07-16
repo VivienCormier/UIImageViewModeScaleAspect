@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD175DA71794529200FAD51D /* becomeapanda_tumblr_com.png in Resources */ = {isa = PBXBuildFile; fileRef = AD175DA61794529200FAD51D /* becomeapanda_tumblr_com.png */; };
+		AD175DA91794536500FAD51D /* becomeapanda_tumblr_com_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = AD175DA81794536500FAD51D /* becomeapanda_tumblr_com_portrait.png */; };
 		AD7B8AB81732918000B4BC44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8AB71732918000B4BC44 /* UIKit.framework */; };
 		AD7B8ABA1732918000B4BC44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8AB91732918000B4BC44 /* Foundation.framework */; };
 		AD7B8ABC1732918000B4BC44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B8ABB1732918000B4BC44 /* CoreGraphics.framework */; };
@@ -20,10 +22,11 @@
 		AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */; };
 		AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */; };
 		AD7B8AE0173291CD00B4BC44 /* UIImageViewModeScaleAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */; };
-		AD7B8AE21732944800B4BC44 /* becomeapanda_tumblr_com.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD175DA61794529200FAD51D /* becomeapanda_tumblr_com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = becomeapanda_tumblr_com.png; sourceTree = "<group>"; };
+		AD175DA81794536500FAD51D /* becomeapanda_tumblr_com_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = becomeapanda_tumblr_com_portrait.png; sourceTree = "<group>"; };
 		AD7B8AB41732918000B4BC44 /* UIImageViewModeScaleAspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageViewModeScaleAspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7B8AB71732918000B4BC44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AD7B8AB91732918000B4BC44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,7 +46,6 @@
 		AD7B8AD61732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		AD7B8ADE173291CD00B4BC44 /* UIImageViewModeScaleAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewModeScaleAspect.h; sourceTree = "<group>"; };
 		AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewModeScaleAspect.m; sourceTree = "<group>"; };
-		AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = becomeapanda_tumblr_com.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 				AD7B8AD01732918000B4BC44 /* ViewController.m */,
 				AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */,
 				AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */,
-				AD7B8AE11732944800B4BC44 /* becomeapanda_tumblr_com.png */,
+				AD175DA61794529200FAD51D /* becomeapanda_tumblr_com.png */,
+				AD175DA81794536500FAD51D /* becomeapanda_tumblr_com_portrait.png */,
 				AD7B8ADD173291CD00B4BC44 /* UIImageViewModeScaleAspect */,
 				AD7B8ABE1732918000B4BC44 /* Supporting Files */,
 			);
@@ -178,13 +181,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD175DA71794529200FAD51D /* becomeapanda_tumblr_com.png in Resources */,
 				AD7B8AC21732918000B4BC44 /* InfoPlist.strings in Resources */,
 				AD7B8ACA1732918000B4BC44 /* Default.png in Resources */,
 				AD7B8ACC1732918000B4BC44 /* Default@2x.png in Resources */,
 				AD7B8ACE1732918000B4BC44 /* Default-568h@2x.png in Resources */,
 				AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */,
+				AD175DA91794536500FAD51D /* becomeapanda_tumblr_com_portrait.png in Resources */,
 				AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */,
-				AD7B8AE21732944800B4BC44 /* becomeapanda_tumblr_com.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +335,7 @@
 				AD7B8ADC1732918000B4BC44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

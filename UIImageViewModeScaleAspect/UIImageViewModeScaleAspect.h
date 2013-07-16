@@ -9,11 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageViewModeScaleAspect : UIImageView{
-    CGRect newFrameWrapper;
-    CGRect newFrameImg;
-    UIImageView *img;
-}
+@interface UIImageViewModeScaleAspect : UIImageView
 
 //
 //

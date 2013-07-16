@@ -9,6 +9,15 @@
 
 #import "UIImageViewModeScaleAspect.h"
 
+@interface UIImageViewModeScaleAspect ()
+
+@property (nonatomic, readwrite) CGRect newFrameWrapper;
+@property (nonatomic, readwrite) CGRect newFrameImg;
+@property (nonatomic) UIImageView *img;
+
+
+@end
+
 @implementation UIImageViewModeScaleAspect
 
 #pragma mark - Init
@@ -17,9 +26,9 @@
     self = [super init];
     if (self) {
         
-        img             = [[UIImageView alloc]init];
-        img.contentMode = UIViewContentModeCenter;
-        [self addSubview:img];
+        self.img             = [[UIImageView alloc]init];
+        self.img.contentMode = UIViewContentModeCenter;
+        [self addSubview:_img];
         
         self.clipsToBounds = YES;
     }
@@ -30,9 +39,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        img             = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        img.contentMode = UIViewContentModeCenter;
-        [self addSubview:img];
+        self.img             = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        self.img.contentMode = UIViewContentModeCenter;
+        self.img.backgroundColor = [UIColor redColor];//
+        self.img.alpha = 0.5; //
+        [self addSubview:_img];
         
         self.clipsToBounds = YES;
     }
@@ -83,21 +94,21 @@
     
     if (![self uiimageIsEmpty]) {
         
-        float ratio = (img.image.size.width) / (img.image.size.height);
+        float ratioImg = (_img.image.size.width) / (_img.image.size.height);
         
-        if (self.frame.size.width * ratio > self.frame.size.width) {
-            img.frame = CGRectMake( - (self.frame.size.width * ratio - self.frame.size.width) / 2.0f, 0, self.frame.size.width * ratio, self.frame.size.height);
+        if ([self choiseFunctionWithRationImg:ratioImg ForFrame:self.frame]) {
+            self.img.frame = CGRectMake( - (self.frame.size.height * ratioImg - self.frame.size.width) / 2.0f, 0, self.frame.size.height * ratioImg, self.frame.size.height);
         }else{
-            img.frame = CGRectMake(0, - (self.frame.size.width / ratio - self.frame.size.height) / 2.0f, self.frame.size.width, self.frame.size.width / ratio);
+            self.img.frame = CGRectMake(0, - (self.frame.size.width / ratioImg - self.frame.size.height) / 2.0f, self.frame.size.width, self.frame.size.width / ratioImg);
         }
     }else{
         NSLog(@"ERROR, UIImageView %@ don't have UIImage",self);
     }
     
-    img.contentMode = UIViewContentModeScaleAspectFit;
+    _img.contentMode = UIViewContentModeScaleAspectFit;
     
-    newFrameImg = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
-    newFrameWrapper = newFrame;
+    self.newFrameImg = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
+    self.newFrameWrapper = newFrame;
     
 }
 
@@ -105,18 +116,18 @@
     
     if (![self uiimageIsEmpty]) {
         
-        float ratio = (img.image.size.width) / (img.image.size.height);
+        float ratioImg = (_img.image.size.width) / (_img.image.size.height);
         
-        if (newFrame.size.width * ratio > newFrame.size.width) {
-            newFrameImg = CGRectMake( - (newFrame.size.width * ratio - newFrame.size.width) / 2.0f, 0, newFrame.size.width * ratio, newFrame.size.height);
+        if ([self choiseFunctionWithRationImg:ratioImg ForFrame:newFrame]) {
+            self.newFrameImg = CGRectMake( - (newFrame.size.height * ratioImg - newFrame.size.width) / 2.0f, 0, newFrame.size.height * ratioImg, newFrame.size.height);
         }else{
-            newFrameImg = CGRectMake(0, - (newFrame.size.width / ratio - newFrame.size.height) / 2.0f, newFrame.size.width, newFrame.size.width / ratio);
+            self.newFrameImg = CGRectMake(0, - (newFrame.size.width / ratioImg - newFrame.size.height) / 2.0f, newFrame.size.width, newFrame.size.width / ratioImg);
         }
     }else{
         NSLog(@"ERROR, UIImageView %@ don't have UIImage",self);
     }
     
-    newFrameWrapper = newFrame;
+    self.newFrameWrapper = newFrame;
     
 }
 
@@ -124,15 +135,15 @@
 
 - (void)animaticToScaleAspectFit{
     
-    img.frame = newFrameImg;
-    [self setFrameWrapper:newFrameWrapper];
+    self.img.frame = _newFrameImg;
+    [self setFrameWrapper:_newFrameWrapper];
     
 }
 
 - (void)animaticToScaleAspectFill{
     
-    img.frame = newFrameImg;
-    [self setFrameWrapper:newFrameWrapper];
+    self.img.frame = _newFrameImg;
+    [self setFrameWrapper:_newFrameWrapper];
     
 }
 
@@ -148,8 +159,8 @@
 
 - (void)animateFinishToScaleAspectFill{
     
-    img.contentMode = UIViewContentModeScaleAspectFill;
-    img.frame  = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    self.img.contentMode = UIViewContentModeScaleAspectFill;
+    self.img.frame  = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     
 }
 
@@ -157,32 +168,32 @@
 
 - (void)setImage:(UIImage *)image{
     
-    img.image = image;
+    self.img.image = image;
     
 }
 
 - (UIImage *)image{
     
-    return img.image;
+    return _img.image;
     
 }
 
 - (void)setContentMode:(UIViewContentMode)contentMode{
     
-    img.contentMode = contentMode;
+    self.img.contentMode = contentMode;
     
 }
 
 - (UIViewContentMode)contentMode{
     
-    return img.contentMode;
+    return _img.contentMode;
     
 }
 
 - (void)setFrame:(CGRect)frame{
     
     [super setFrame:frame];
-    img.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.img.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 }
 
 - (void)setFrameWrapper:(CGRect)frame{
@@ -195,8 +206,8 @@
 
 - (BOOL)uiimageIsEmpty{
     
-    CGImageRef cgref = [img.image CGImage];
-    CIImage *cim = [img.image  CIImage];
+    CGImageRef cgref = [_img.image CGImage];
+    CIImage *cim = [_img.image  CIImage];
     
     if (cim == nil && cgref == NULL)
     {
@@ -204,6 +215,22 @@
     }else{
         return false;
     }
+    
+}
+
+- (BOOL)choiseFunctionWithRationImg:(float)ratioImg ForFrame:(CGRect)newFrame{
+    
+    BOOL resultat = false;
+    
+    float ratioSelf = (newFrame.size.width) / (newFrame.size.height);
+    
+    if (ratioImg < 1) {
+        if (ratioImg > ratioSelf ) resultat = true;
+    }else{
+        if (ratioImg > ratioSelf ) resultat = true;
+    }
+    
+    return resultat;
     
 }
 

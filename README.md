@@ -1,5 +1,5 @@
-UIImageViewModeScaleAspect
-==========================
+UIImageViewModeScaleAspect (1.1)
+================================
 
 <p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>
 <a href="http://www.viviencormier.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
@@ -16,11 +16,16 @@ Screenshot & Demo Video
 How To Get Started
 ------------------
 
-<p>Add "UIImageViewModeScaleAspect.h" and "UIImageViewModeScaleAspect.m" in your xcodeprojet. Import the .h file :</p>
+<p>Use Pod (or download and add "UIImageViewModeScaleAspect.h" and "UIImageViewModeScaleAspect.m" in your xcodeprojet.) : </p>
+
+``` objective-c
+pod 'UIImageViewModeScaleAspect'
+```
+
+<p>Import the .h file :</p>
 ``` objective-c
 #import "UIImageViewModeScaleAspect.h"
 ```
-
 
 <p>Init the UIImageViewModeScaleAspect. Important ! Do not forget to init the contentMode :</p>
 ``` objective-c

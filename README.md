@@ -1,16 +1,16 @@
-UIImageViewModeScaleAspect (1.1)
+UIImageViewModeScaleAspect (1.2)
 ================================
 
 <p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>
-<a href="http://www.viviencormier.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
+<a href="http://www.alexruperez.com/" target="_blank">My WebSite</a>
 
 Screenshot & Demo Video
 -----------------------
 
 <p>To see a demo video, click <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">here</a></p>
 <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">
-  <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_1.png?raw=true" width="500" height="391" />
-  <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_2.png?raw=true" width="500" height="391" />
+  <img alt="ScreenShot Demo Video" src="https://github.com/alexruperez/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_1.png?raw=true" width="500" height="391" />
+  <img alt="ScreenShot Demo Video" src="https://github.com/alexruperez/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_2.png?raw=true" width="500" height="391" />
 </a>
 
 How To Get Started
@@ -29,23 +29,19 @@ pod 'UIImageViewModeScaleAspect'
 
 <p>Init the UIImageViewModeScaleAspect. Important ! Do not forget to init the contentMode :</p>
 ``` objective-c
-UIImageViewModeScaleAspect *myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
+UIImageViewModeScaleAspect *myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(50, 100, 200, 100)];
 myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
 myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
+myImage.backgroundColor = [UIColor blackColor];
 [self.view addSubview:myImage];
 ```
 
 Automatic animation
 -------------------
 
-<p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
+<p>To switch between UIViewContentModeScaleAspectFill and UIViewContentModeScaleAspectFit simply :</p>
 ``` objective-c
-[myImage animateToScaleAspectFitToFrame:CGRectMake(0, 0, 200, 200) WithDuration:0.4f afterDelay:0.0f];
-```
-
-<p>For convert UIViewContentModeScaleAspectFit to UIViewContentModeScaleAspectFill :</p>
-``` objective-c
-[myImage animateToScaleAspectFillToFrame:CGRectMake(0, 0, 200, 200) WithDuration:0.4f afterDelay:0.0f];
+[myImage animate];
 ```
 
 Manual animation
@@ -53,7 +49,7 @@ Manual animation
 
 <p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
 ``` objective-c
-[myImage initToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100)];
+[myImage initToScaleAspectFillToFrame:CGRectMake(50, 100, 200, 100)];
         
 [UIView animateWithDuration:0.4f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction
                  animations:^{

@@ -28,7 +28,7 @@
     [self.view addSubview:myImage];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(animateImage)];
-    [self.view addGestureRecognizer:tap];
+    [myImage addGestureRecognizer:tap];
 }
 
 - (void)animateImage{

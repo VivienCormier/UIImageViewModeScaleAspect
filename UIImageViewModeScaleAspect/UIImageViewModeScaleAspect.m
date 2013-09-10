@@ -35,6 +35,7 @@ bool enlarged;
         self.img = [[UIImageView alloc]init];
         [self addSubview:_img];
         
+        self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
     }
     return self;
@@ -47,6 +48,7 @@ bool enlarged;
         self.img = [[UIImageView alloc]initWithFrame:[self bounds]];
         [self addSubview:_img];
         
+        self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
     }
     return self;

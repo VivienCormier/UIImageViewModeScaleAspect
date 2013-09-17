@@ -82,6 +82,7 @@ bool enlarged;
 - (void)animateToScaleAspectFillToFrame:(CGRect)frame WithDuration:(float)duration afterDelay:(float)delay{
     
     if (![self uiimageIsEmpty]) {
+        self.userInteractionEnabled = NO;
         enlarged = NO;
         [self initToScaleAspectFillToFrame:frame];
         
@@ -185,6 +186,7 @@ bool enlarged;
     UIView *superView = self.superview;
     [self removeFromSuperview];
     [superView insertSubview:self atIndex:_lastIndexImg];
+    self.userInteractionEnabled = YES;
 }
 
 #pragma mark - Rewrite Setter / Getter

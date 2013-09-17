@@ -19,8 +19,7 @@
 		AD7B8ACC1732918000B4BC44 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8ACB1732918000B4BC44 /* Default@2x.png */; };
 		AD7B8ACE1732918000B4BC44 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8ACD1732918000B4BC44 /* Default-568h@2x.png */; };
 		AD7B8AD11732918000B4BC44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8AD01732918000B4BC44 /* ViewController.m */; };
-		AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */; };
-		AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */; };
+		AD7B8AD41732918000B4BC44 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B8AD21732918000B4BC44 /* ViewController.xib */; };
 		AD7B8AE0173291CD00B4BC44 /* UIImageViewModeScaleAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +41,7 @@
 		AD7B8ACD1732918000B4BC44 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AD7B8ACF1732918000B4BC44 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD7B8AD01732918000B4BC44 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AD7B8AD31732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		AD7B8AD61732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		AD7B8AD31732918000B4BC44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		AD7B8ADE173291CD00B4BC44 /* UIImageViewModeScaleAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewModeScaleAspect.h; sourceTree = "<group>"; };
 		AD7B8ADF173291CD00B4BC44 /* UIImageViewModeScaleAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewModeScaleAspect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,8 +94,7 @@
 				AD7B8AC71732918000B4BC44 /* AppDelegate.m */,
 				AD7B8ACF1732918000B4BC44 /* ViewController.h */,
 				AD7B8AD01732918000B4BC44 /* ViewController.m */,
-				AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */,
-				AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */,
+				AD7B8AD21732918000B4BC44 /* ViewController.xib */,
 				AD175DA61794529200FAD51D /* becomeapanda_tumblr_com.png */,
 				AD175DA81794536500FAD51D /* becomeapanda_tumblr_com_portrait.png */,
 				AD7B8ADD173291CD00B4BC44 /* UIImageViewModeScaleAspect */,
@@ -186,9 +183,8 @@
 				AD7B8ACA1732918000B4BC44 /* Default.png in Resources */,
 				AD7B8ACC1732918000B4BC44 /* Default@2x.png in Resources */,
 				AD7B8ACE1732918000B4BC44 /* Default-568h@2x.png in Resources */,
-				AD7B8AD41732918000B4BC44 /* ViewController_iPhone.xib in Resources */,
+				AD7B8AD41732918000B4BC44 /* ViewController.xib in Resources */,
 				AD175DA91794536500FAD51D /* becomeapanda_tumblr_com_portrait.png in Resources */,
-				AD7B8AD71732918000B4BC44 /* ViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,20 +213,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		AD7B8AD21732918000B4BC44 /* ViewController_iPhone.xib */ = {
+		AD7B8AD21732918000B4BC44 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AD7B8AD31732918000B4BC44 /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		AD7B8AD51732918000B4BC44 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD7B8AD61732918000B4BC44 /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,7 +249,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -286,7 +274,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

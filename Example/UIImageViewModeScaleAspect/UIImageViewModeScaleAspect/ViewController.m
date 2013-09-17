@@ -21,14 +21,14 @@
     //
     //Init UIImageViewModeScaleAspect
     //
-    myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
+    myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(50, 100, 200, 100)];
     myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
     myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
     myImage.backgroundColor = [UIColor blackColor];
     [self.view addSubview:myImage];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(animateImage)];
-    [self.view addGestureRecognizer:tap];
+    [myImage addGestureRecognizer:tap];
 }
 
 - (void)animateImage{
@@ -39,11 +39,7 @@
     //
     ////////////////////////
     
-    if (myImage.contentMode == UIViewContentModeScaleAspectFit) {
-        [myImage animateToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100) WithDuration:0.4f afterDelay:0.0f];
-    }else{
-        [myImage animateToScaleAspectFitToFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) WithDuration:0.4f afterDelay:0.0f];
-    }
+    [myImage animate];
     
     ////////////////////////
     //
@@ -84,12 +80,6 @@
 //                         }];
 //    }
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

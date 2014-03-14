@@ -171,8 +171,17 @@
 }
 
 - (UIImage *)image{
+    NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
     
-    return _img.image;
+    NSCharacterSet *separatorSet = [NSCharacterSet characterSetWithCharactersInString:@" -[]+?.,"];
+    NSMutableArray *array = [NSMutableArray arrayWithArray:[sourceString  componentsSeparatedByCharactersInSet:separatorSet]];
+    [array removeObject:@""];
+    
+    if ([[array objectAtIndex:3] isEqualToString:@"<redacted>"]) {
+        return nil;
+    } else {
+        return _img.image;
+    }
     
 }
 

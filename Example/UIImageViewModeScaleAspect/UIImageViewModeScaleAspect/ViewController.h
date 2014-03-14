@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIImageViewModeScaleAspect.h"
 
-@interface ViewController : UIViewController{
-    
-    UIImageViewModeScaleAspect *myImage;
-}
+@interface ViewController : UIViewController
 
 @end

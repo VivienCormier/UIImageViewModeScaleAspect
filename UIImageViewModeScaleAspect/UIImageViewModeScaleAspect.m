@@ -11,18 +11,22 @@
 
 @interface UIImageViewModeScaleAspect ()
 
-@property (nonatomic, readwrite) CGRect newFrameWrapper;
-@property (nonatomic, readwrite) CGRect newFrameImg;
-@property (nonatomic) UIImageView *img;
-
+@property (readwrite, nonatomic) CGRect newFrameWrapper;
+@property (readwrite, nonatomic) CGRect newFrameImg;
+@property (strong, nonatomic) UIImageView *img;
 
 @end
 
 @implementation UIImageViewModeScaleAspect
 
-#pragma mark - Init
+#pragma mark - Lifecycle
 
-- (id)init {
+/**
+ *  Init self
+ *
+ *  @return self
+ */
+- (id)init{
     self = [super init];
     if (self) {
         
@@ -34,8 +38,16 @@
     }
     return self;
 }
-- (id)initWithFrame:(CGRect)frame
-{
+
+/**
+ *  Init self with frame
+ *
+ *  @param frame
+ *
+ *  @return self
+ */
+- (id)initWithFrame:(CGRect)frame{
+    
     self = [super initWithFrame:frame];
     if (self) {
         
@@ -50,9 +62,16 @@
 
 #pragma mark - Automatic Animate
 
+/**
+ *  Automatic Animate Fill to Fit
+ *
+ *  @param frame
+ *  @param duration
+ *  @param delay
+ */
 - (void)animateToScaleAspectFitToFrame:(CGRect)frame WithDuration:(float)duration afterDelay:(float)delay{
     
-    if (![self uiimageIsEmpty]) {
+    if (![self UIImageIsEmpty]) {
         [self initToScaleAspectFitToFrame:frame];
         
         [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionAllowUserInteraction
@@ -66,9 +85,16 @@
     
 }
 
+/**
+ *  Automatic Animate Fit to Fill
+ *
+ *  @param frame
+ *  @param duration
+ *  @param delay
+ */
 - (void)animateToScaleAspectFillToFrame:(CGRect)frame WithDuration:(float)duration afterDelay:(float)delay{
     
-    if (![self uiimageIsEmpty]) {
+    if (![self UIImageIsEmpty]) {
         
         [self initToScaleAspectFillToFrame:frame];
         
@@ -84,13 +110,81 @@
     
 }
 
+/**
+ *  Automatic Animate Fill to Fit with completion
+ *
+ *  @param frame
+ *  @param duration
+ *  @param delay
+ *  @param completion
+ */
+- (void)animateToScaleAspectFitToFrame:(CGRect)frame WithDuration:(float)duration afterDelay:(float)delay completion:(void (^)(BOOL finished))completion{
+    
+    if (![self UIImageIsEmpty]) {
+        [self initToScaleAspectFitToFrame:frame];
+        
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionAllowUserInteraction
+                         animations:^{
+                             [self animaticToScaleAspectFit];
+                         } completion:^(BOOL finished) {
+                             if (completion) {
+                                 completion(YES);
+                             }
+                         }];
+    }else{
+        if (completion) {
+            completion(YES);
+        }
+        NSLog(@"ERROR, UIImageView %@ don't have UIImage",self);
+    }
+    
+    
+}
+
+/**
+ *  Automatic Animate Fit to Fill with completion
+ *
+ *  @param frame
+ *  @param duration
+ *  @param delay
+ *  @param completion
+ */
+- (void)animateToScaleAspectFillToFrame:(CGRect)frame WithDuration:(float)duration afterDelay:(float)delay completion:(void (^)(BOOL finished))completion{
+    
+    if (![self UIImageIsEmpty]) {
+        
+        [self initToScaleAspectFillToFrame:frame];
+        
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionAllowUserInteraction
+                         animations:^{
+                             [self animaticToScaleAspectFill];
+                         } completion:^(BOOL finished) {
+                             [self animateFinishToScaleAspectFill];
+                             if (completion) {
+                                 completion(YES);
+                             }
+                         }];
+    }else{
+        if (completion) {
+            completion(YES);
+        }
+        NSLog(@"ERROR, UIImageView %@ don't have UIImage",self);
+    }
+    
+}
+
 #pragma mark - Manual Animate
 
 #pragma mark - - Init Function
 
+/**
+ *  Init Manual Function Fit
+ *
+ *  @param newFrame
+ */
 - (void)initToScaleAspectFitToFrame:(CGRect)newFrame{
     
-    if (![self uiimageIsEmpty]) {
+    if (![self UIImageIsEmpty]) {
         
         float ratioImg = (_img.image.size.width) / (_img.image.size.height);
         
@@ -110,9 +204,14 @@
     
 }
 
+/**
+ *  Init Manual Function Fill
+ *
+ *  @param newFrame
+ */
 - (void)initToScaleAspectFillToFrame:(CGRect)newFrame{
     
-    if (![self uiimageIsEmpty]) {
+    if (![self UIImageIsEmpty]) {
         
         float ratioImg = (_img.image.size.width) / (_img.image.size.height);
         
@@ -131,6 +230,9 @@
 
 #pragma mark - - Animatic Function
 
+/**
+ *  Animatic Fucntion Fit
+ */
 - (void)animaticToScaleAspectFit{
     
     self.img.frame = _newFrameImg;
@@ -138,6 +240,9 @@
     
 }
 
+/**
+ *  Animatic Function Fill
+ */
 - (void)animaticToScaleAspectFill{
     
     self.img.frame = _newFrameImg;
@@ -147,6 +252,9 @@
 
 #pragma mark - - Last Function
 
+/**
+ *  Last Function Fit
+ */
 - (void)animateFinishToScaleAspectFit{
     
     //
@@ -155,6 +263,9 @@
     
 }
 
+/**
+ *  Last Function Fill
+ */
 - (void)animateFinishToScaleAspectFill{
     
     self.img.contentMode = UIViewContentModeScaleAspectFill;
@@ -171,6 +282,7 @@
 }
 
 - (UIImage *)image{
+    
     NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
     
     NSCharacterSet *separatorSet = [NSCharacterSet characterSetWithCharactersInString:@" -[]+?.,"];
@@ -209,9 +321,9 @@
     
 }
 
-#pragma marf - Private Funcion
+#pragma marf - Private
 
-- (BOOL)uiimageIsEmpty{
+- (BOOL)UIImageIsEmpty{
     
     CGImageRef cgref = [_img.image CGImage];
     CIImage *cim = [_img.image  CIImage];

@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "UIImageViewModeScaleAspect.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) UIImageViewModeScaleAspect *myImage;
 
 @end
 
@@ -21,11 +24,11 @@
     //
     //Init UIImageViewModeScaleAspect
     //
-    myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
-    myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
-    myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
-    myImage.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:myImage];
+    self.myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
+    self.myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
+    self.myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
+    self.myImage.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:_myImage];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(animateImage)];
     [self.view addGestureRecognizer:tap];
@@ -39,10 +42,10 @@
     //
     ////////////////////////
     
-    if (myImage.contentMode == UIViewContentModeScaleAspectFit) {
-        [myImage animateToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100) WithDuration:0.4f afterDelay:0.0f];
+    if (self.myImage.contentMode == UIViewContentModeScaleAspectFit) {
+        [self.myImage animateToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100) WithDuration:0.4f afterDelay:0.0f];
     }else{
-        [myImage animateToScaleAspectFitToFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) WithDuration:0.4f afterDelay:0.0f];
+        [self.myImage animateToScaleAspectFitToFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) WithDuration:0.4f afterDelay:0.0f];
     }
     
     ////////////////////////
@@ -51,36 +54,36 @@
     //
     ////////////////////////
     
-//    if (myImage.contentMode == UIViewContentModeScaleAspectFit) {
+//    if (self.myImage.contentMode == UIViewContentModeScaleAspectFit) {
 //        
-//        [myImage initToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100)];
+//        [self.myImage initToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100)];
 //        
 //        [UIView animateWithDuration:0.4f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction
 //                         animations:^{
 //                             //
 //                             // Others Animation
 //                             //
-//                             [myImage animaticToScaleAspectFill];
+//                             [self.myImage animaticToScaleAspectFill];
 //                             //
 //                             // Others Animation
 //                             //
 //                         } completion:^(BOOL finished) {
-//                             [myImage animateFinishToScaleAspectFill];
+//                             [self.myImage animateFinishToScaleAspectFill];
 //                         }];
 //    }else{
-//        [myImage initToScaleAspectFitToFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+//        [self.myImage initToScaleAspectFitToFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 //        
 //        [UIView animateWithDuration:0.4f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction
 //                         animations:^{
 //                             //
 //                             // Others Animation
 //                             //
-//                             [myImage animaticToScaleAspectFit];
+//                             [self.myImage animaticToScaleAspectFit];
 //                             //
 //                             // Others Animation
 //                             //
 //                         } completion:^(BOOL finished) {
-//                             [myImage animateFinishToScaleAspectFit];
+//                             [self.myImage animateFinishToScaleAspectFit];
 //                         }];
 //    }
     

@@ -1,4 +1,4 @@
-UIImageViewModeScaleAspect (1.1)
+UIImageViewModeScaleAspect (1.2)
 ================================
 
 <p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>

@@ -103,4 +103,9 @@
  */
 - (void)animateFinishToScaleAspectFill;
 
+
+- (UIImage *)getImage;
+
+- (UIImage *)image __attribute((deprecated("use getImage method")));
+
 @end

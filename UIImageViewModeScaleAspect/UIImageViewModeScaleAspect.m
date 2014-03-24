@@ -19,6 +19,8 @@
 
 @implementation UIImageViewModeScaleAspect
 
+@synthesize image = _image;
+
 #pragma mark - Lifecycle
 
 /**
@@ -273,6 +275,14 @@
     
 }
 
+#pragma mark - Getter
+
+- (UIImage *)getImage{
+    
+    return _img.image;
+    
+}
+
 #pragma mark - Rewrite Setter / Getter
 
 - (void)setImage:(UIImage *)image{
@@ -283,18 +293,9 @@
 
 - (UIImage *)image{
     
-    NSString *sourceString = [[NSThread callStackSymbols] objectAtIndex:1];
+    // If you want the UIImage use "getImage"
     
-    NSCharacterSet *separatorSet = [NSCharacterSet characterSetWithCharactersInString:@" -[]+?.,"];
-    NSMutableArray *array = [NSMutableArray arrayWithArray:[sourceString  componentsSeparatedByCharactersInSet:separatorSet]];
-    [array removeObject:@""];
-    
-    if ([[array objectAtIndex:3] isEqualToString:@"<redacted>"]) {
-        return nil;
-    } else {
-        return _img.image;
-    }
-    
+    return nil;
 }
 
 - (void)setContentMode:(UIViewContentMode)contentMode{

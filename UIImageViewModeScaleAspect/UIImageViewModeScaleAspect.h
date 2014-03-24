@@ -9,7 +9,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageViewModeScaleAspect : UIImageView
+@interface UIImageViewModeScaleAspect : UIView
+
+@property(nonatomic, strong) UIImage *image;
 
 #pragma mark - Automatic Animate
 
@@ -102,10 +104,5 @@
  *  Last Function Fill
  */
 - (void)animateFinishToScaleAspectFill;
-
-
-- (UIImage *)getImage;
-
-- (UIImage *)image __attribute((deprecated("use getImage method")));
 
 @end

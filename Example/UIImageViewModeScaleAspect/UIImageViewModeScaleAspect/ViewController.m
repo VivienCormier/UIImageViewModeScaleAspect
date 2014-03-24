@@ -26,13 +26,9 @@
     //
     self.myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
     self.myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
-    self.myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com_portrait"];
+    self.myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
     self.myImage.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_myImage];
-    
-    //
-    // New : use to get the UIImage use [self.myImage getImage] instead of [self.myImage image]
-    //
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(animateImage)];
     [self.view addGestureRecognizer:tap];

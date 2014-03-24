@@ -19,8 +19,6 @@
 
 @implementation UIImageViewModeScaleAspect
 
-@synthesize image = _image;
-
 #pragma mark - Lifecycle
 
 /**
@@ -275,14 +273,6 @@
     
 }
 
-#pragma mark - Getter
-
-- (UIImage *)getImage{
-    
-    return _img.image;
-    
-}
-
 #pragma mark - Rewrite Setter / Getter
 
 - (void)setImage:(UIImage *)image{
@@ -293,9 +283,8 @@
 
 - (UIImage *)image{
     
-    // If you want the UIImage use "getImage"
+    return _img.image;
     
-    return nil;
 }
 
 - (void)setContentMode:(UIViewContentMode)contentMode{

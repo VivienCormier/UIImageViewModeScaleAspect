@@ -7,9 +7,11 @@ UIImageViewModeScaleAspect (1.2)
 Screenshot & Demo Video
 -----------------------
 
-<p>To see a demo video, click <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">here</a></p>
 <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">
   <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_1.png?raw=true" width="500" height="391" />
+  
+![GIF of screenshot demo video](http://cdn.makeagif.com/media/7-08-2015/PC-qOM.gif)
+  
   <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_2.png?raw=true" width="500" height="391" />
 </a>
 

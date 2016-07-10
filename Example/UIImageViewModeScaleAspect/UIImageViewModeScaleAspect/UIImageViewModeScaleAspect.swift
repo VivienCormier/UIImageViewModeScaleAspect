@@ -15,7 +15,11 @@ class UIImageViewModeScaleAspect: UIView {
         case Fill
     }
     
-    var image: UIImage?
+    var image: UIImage? {
+        didSet {
+            transitionImage.image = image
+        }
+    }
     
     private var transitionImage: UIImageView
     private var newTransitionImageFrame: CGRect?
@@ -36,7 +40,7 @@ class UIImageViewModeScaleAspect: UIView {
     override init(frame: CGRect) {
         
         transitionImage = UIImageView(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
-        transitionImage.contentMode = .Center;
+        transitionImage.contentMode = .ScaleAspectFit;
         
         super.init(frame: frame)
         
@@ -84,8 +88,9 @@ class UIImageViewModeScaleAspect: UIView {
         let ratio = transitionImage.image!.size.width / transitionImage.image!.size.height
         
         if newScaleAspect == ScaleAspect.Fill {
-            newTransitionImageFrame = UIImageViewModeScaleAspect.initialeTransitionImageFrame(newScaleAspect, ratio: ratio, newFrame: newFrame)
+            newTransitionImageFrame = initialeTransitionImageFrame(newScaleAspect, ratio: ratio, newFrame: newFrame)
         } else {
+            transitionImage.frame = initialeTransitionImageFrame(newScaleAspect, ratio: ratio, newFrame: frame)
             transitionImage.contentMode = UIViewContentMode.ScaleAspectFit;
             newTransitionImageFrame = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
         }
@@ -97,7 +102,7 @@ class UIImageViewModeScaleAspect: UIView {
     
     func transitionState(scaleAspect: ScaleAspect) -> Void {
         transitionImage.frame = newTransitionImageFrame!
-        frame = newSelfFrame!
+        super.frame = newSelfFrame!
     }
     
     func endState(scaleAspect: ScaleAspect) -> Void {
@@ -135,7 +140,7 @@ class UIImageViewModeScaleAspect: UIView {
         }
     }
     
-    private static func initialeTransitionImageFrame(scaleAspect: ScaleAspect, ratio: CGFloat, newFrame: CGRect) -> CGRect {
+    private func initialeTransitionImageFrame(scaleAspect: ScaleAspect, ratio: CGFloat, newFrame: CGRect) -> CGRect {
         
         var selectFrameFormula = false
         
@@ -146,19 +151,19 @@ class UIImageViewModeScaleAspect: UIView {
         }
         
         if scaleAspect == ScaleAspect.Fill {
-            
+
             if (selectFrameFormula) {
-                return CGRectMake( -(newFrame.size.height * ratio - newFrame.size.width) / 2.0, 0, newFrame.size.height * ratio, newFrame.size.height);
+                return CGRectMake( -(newFrame.size.height * ratio - newFrame.size.width) / 2.0, 0, newFrame.size.height * ratio, newFrame.size.height)
             }else{
-                return CGRectMake(0, -(newFrame.size.width / ratio - newFrame.size.height) / 2.0, newFrame.size.width, newFrame.size.width / ratio);
+                return CGRectMake(0, -(newFrame.size.width / ratio - newFrame.size.height) / 2.0, newFrame.size.width, newFrame.size.width / ratio)
             }
             
         } else {
-            
+
             if (selectFrameFormula) {
-                return CGRectMake( -(newFrame.size.height * ratio - newFrame.size.width) / 2.0, 0, newFrame.size.height * ratio, newFrame.size.height);
+                return CGRectMake( -(frame.size.height * ratio - frame.size.width) / 2.0, 0, frame.size.height * ratio, frame.size.height)
             }else{
-                return CGRectMake(0, -(newFrame.size.width / ratio - newFrame.size.height) / 2.0, newFrame.size.width, newFrame.size.width / ratio);
+                return CGRectMake(0, -(frame.size.width / ratio - frame.size.height) / 2.0, frame.size.width, frame.size.width / ratio)
             }
             
         }

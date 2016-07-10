@@ -492,6 +492,7 @@
 				4D3735211D2D84BD00645D3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D3735221D2D84BD00645D3F /* Build configuration list for PBXNativeTarget "UIImageViewModeScaleAspectTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +501,7 @@
 				4D3735241D2D84BD00645D3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D3735251D2D84BD00645D3F /* Build configuration list for PBXNativeTarget "UIImageViewModeScaleAspectUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +510,7 @@
 				4D3735271D2D84BD00645D3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

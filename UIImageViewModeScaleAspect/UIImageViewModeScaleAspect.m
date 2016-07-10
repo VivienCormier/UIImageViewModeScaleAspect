@@ -31,6 +31,8 @@
 	if (self) {
 		[self setup];
 	}
+    
+    
     return self;
 }
 

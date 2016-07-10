@@ -37,6 +37,7 @@
 -(void)awakeFromNib {
 	[super awakeFromNib];
 	[self setup];
+    self.img.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
 /**
@@ -58,7 +59,6 @@
 -(void) setup {
 	self.img             = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 	self.img.contentMode = UIViewContentModeCenter;
-	self.img.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self addSubview:_img];
 	
 	self.clipsToBounds = YES;

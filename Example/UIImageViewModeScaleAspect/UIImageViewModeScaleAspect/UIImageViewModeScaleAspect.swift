@@ -31,8 +31,10 @@ class UIImageViewModeScaleAspect: UIView {
         transitionImage.contentMode = .Center
         
         super.init(coder: aDecoder)
-        
+
         addSubview(transitionImage)
+        transitionImage.frame = CGRectMake(0, 0, frame.size.width, frame.size.height)
+        transitionImage.autoresizingMask = [ .FlexibleWidth, .FlexibleHeight]
         clipsToBounds = true
         
     }
@@ -50,39 +52,59 @@ class UIImageViewModeScaleAspect: UIView {
     }
     
     //MARK: Automatic animations
-    
-    func animate(scaleAspect: ScaleAspect, frame: CGRect, duration: Double, delay: Double) -> Void {
-        
-        if transitionImage.image == nil {
-            //TODO: Manage error
-            return
+
+    /**
+     Animate the UIImageView between to UIViewContentModeScaleAspect[Fill, Fit]
+
+     - Parameters:
+        - scaleAspect: Content mode that you want to change.
+        - frame: Optional parameters. New frame you want to set to your image during the animation. If nil, only the scale aspect is changed.
+        - duration: The total duration of the animations, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
+        - delay: Optional parameters. The amount of time (measured in seconds) to wait before beginning the animations. Specify a value of 0 to begin the animations immediately.
+        - completion: Optional parameters. A block object to be executed when the animation sequence ends. This block has no return value and takes a single Boolean argument that indicates whether or not the animations actually finished before the completion handler was called. If the duration of the animation is 0, this block is performed at the beginning of the next run loop cycle. This parameter may be NULL.
+
+     - Returns: Animated image.
+     */
+    func animate(scaleAspect: ScaleAspect, frame: CGRect? = nil, duration: Double, delay: Double? = nil, completion: ((Bool) -> Void)? = nil) -> Void {
+
+        var newFrame = self.frame
+        if frame != nil {
+            newFrame = frame!
+        }
+
+        initialeState(scaleAspect, newFrame: newFrame)
+
+        var delayAnimation = 0.0
+        if delay != nil {
+            delayAnimation = delay!
         }
         
-        initialeState(scaleAspect, newFrame: frame)
-        
-        UIView.animateWithDuration(duration, delay: delay, options: .AllowAnimatedContent, animations: {
+        UIView.animateWithDuration(duration, delay: delayAnimation, options: .AllowAnimatedContent, animations: {
             self.transitionState(scaleAspect)
         }, completion: { (finished) in
             self.endState(scaleAspect)
+            completion?(finished)
         })
         
     }
     
     //MARK: Manual animations
-    
+
+    /**
+     If you want to animate yourself the image, you need to call this function before the animation block.
+
+     - Parameters:
+        - scaleAspect: Content mode that you want to change.
+
+     - Returns: New frame for the image
+     */
     func initialeState(newScaleAspect: ScaleAspect, newFrame: CGRect) -> Void {
         
-        if transitionImage.image == nil {
-            //TODO: Manage error
-            return
-        }
+        precondition(transitionImage.image != nil)
         
-        if newScaleAspect == ScaleAspect.Fill && contentMode == .ScaleAspectFill {
-            //TODO: Manage error
-        }
-        
-        if newScaleAspect == ScaleAspect.Fit && contentMode == .ScaleAspectFit {
-            //TODO: Manage error
+        if newScaleAspect == ScaleAspect.Fill && contentMode == .ScaleAspectFill ||
+            newScaleAspect == ScaleAspect.Fit && contentMode == .ScaleAspectFit {
+            print("UIImageViewModeScaleAspect - Warning : You are trying to animate your image to \(contentMode) but it's already set.")
         }
         
         let ratio = transitionImage.image!.size.width / transitionImage.image!.size.height
@@ -94,17 +116,32 @@ class UIImageViewModeScaleAspect: UIView {
             transitionImage.contentMode = UIViewContentMode.ScaleAspectFit;
             newTransitionImageFrame = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
         }
-        
-        // Maybe update self frame ?
+
         newSelfFrame = newFrame
         
     }
-    
+
+    /**
+     If you want to animate yourself the image, you need to call this function inside the animation block
+
+     - Parameters:
+        - scaleAspect: Content mode that you want to change.
+
+     - Returns: New frame for the image
+     */
     func transitionState(scaleAspect: ScaleAspect) -> Void {
         transitionImage.frame = newTransitionImageFrame!
         super.frame = newSelfFrame!
     }
-    
+
+    /**
+     If you want to animate yourself the image, you need to call this function in the completion block of the animation.
+
+     - Parameters:
+        - scaleAspect: Content mode that you want to change.
+
+     - Returns: New frame for the image
+     */
     func endState(scaleAspect: ScaleAspect) -> Void {
         if scaleAspect == ScaleAspect.Fill {
             transitionImage.contentMode = .ScaleAspectFill;

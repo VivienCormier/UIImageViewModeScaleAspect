@@ -48,8 +48,6 @@
 		4D3735161D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIImageViewModeScaleAspectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D37351A1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewModeScaleAspectUITests.swift; sourceTree = "<group>"; };
 		4D37351C1D2D84BD00645D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D3735281D2D851E00645D3F /* UIImageViewModeScaleAspect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIImageViewModeScaleAspect.h; path = ../../../UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.h; sourceTree = "<group>"; };
-		4D3735291D2D851E00645D3F /* UIImageViewModeScaleAspect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIImageViewModeScaleAspect.m; path = ../../../UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.m; sourceTree = "<group>"; };
 		4D37352C1D2D854400645D3F /* UIImageViewModeScaleAspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewModeScaleAspect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +105,6 @@
 				4D3735011D2D84BD00645D3F /* Assets.xcassets */,
 				4D3735031D2D84BD00645D3F /* LaunchScreen.storyboard */,
 				4D3735061D2D84BD00645D3F /* Info.plist */,
-				4D3735281D2D851E00645D3F /* UIImageViewModeScaleAspect.h */,
-				4D3735291D2D851E00645D3F /* UIImageViewModeScaleAspect.m */,
 				4D37352C1D2D854400645D3F /* UIImageViewModeScaleAspect.swift */,
 			);
 			path = UIImageViewModeScaleAspect;

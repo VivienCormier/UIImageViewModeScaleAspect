@@ -29,9 +29,9 @@ class ViewController: UIViewController {
     func animateImage() {
 
         if myImage.contentMode == .ScaleAspectFill {
-            myImage.animate( .Fit, frame: CGRectMake(0, 0, view.frame.width, view.frame.height), duration: 0.4, delay: 0)
+            myImage.animate( .Fit, frame: CGRectMake(0, 0, view.frame.width, view.frame.height), duration: 0.4)
         } else {
-            myImage.animate( .Fill, frame: CGRectMake(0, 100, 200, 100), duration: 0.4, delay: 0)
+            myImage.animate( .Fill, frame: CGRectMake(0, 100, 200, 100), duration: 0.4)
         }
 
     }

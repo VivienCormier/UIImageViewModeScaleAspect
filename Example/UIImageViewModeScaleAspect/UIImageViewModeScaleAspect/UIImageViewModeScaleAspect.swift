@@ -8,24 +8,25 @@
 
 import UIKit
 
-class UIImageViewModeScaleAspect: UIView {
+@IBDesignable
+public class UIImageViewModeScaleAspect: UIView {
     
-    enum ScaleAspect {
+    public enum ScaleAspect {
         case Fit
         case Fill
     }
     
-    var image: UIImage? {
+    @IBInspectable public var image: UIImage? {
         didSet {
             transitionImage.image = image
         }
     }
     
-    private var transitionImage: UIImageView
+    internal var transitionImage: UIImageView
     private var newTransitionImageFrame: CGRect?
     private var newSelfFrame: CGRect?
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         
         transitionImage = UIImageView()
         transitionImage.contentMode = .Center
@@ -39,7 +40,7 @@ class UIImageViewModeScaleAspect: UIView {
         
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         
         transitionImage = UIImageView(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
         transitionImage.contentMode = .ScaleAspectFit;
@@ -65,7 +66,7 @@ class UIImageViewModeScaleAspect: UIView {
 
      - Returns: Animated image.
      */
-    func animate(scaleAspect: ScaleAspect, frame: CGRect? = nil, duration: Double, delay: Double? = nil, completion: ((Bool) -> Void)? = nil) -> Void {
+    public func animate(scaleAspect: ScaleAspect, frame: CGRect? = nil, duration: Double, delay: Double? = nil, completion: ((Bool) -> Void)? = nil) -> Void {
 
         var newFrame = self.frame
         if frame != nil {
@@ -98,7 +99,7 @@ class UIImageViewModeScaleAspect: UIView {
 
      - Returns: New frame for the image
      */
-    func initialeState(newScaleAspect: ScaleAspect, newFrame: CGRect) -> Void {
+    public func initialeState(newScaleAspect: ScaleAspect, newFrame: CGRect) -> Void {
         
         precondition(transitionImage.image != nil)
         
@@ -129,7 +130,7 @@ class UIImageViewModeScaleAspect: UIView {
 
      - Returns: New frame for the image
      */
-    func transitionState(scaleAspect: ScaleAspect) -> Void {
+    public func transitionState(scaleAspect: ScaleAspect) -> Void {
         transitionImage.frame = newTransitionImageFrame!
         super.frame = newSelfFrame!
     }
@@ -142,7 +143,7 @@ class UIImageViewModeScaleAspect: UIView {
 
      - Returns: New frame for the image
      */
-    func endState(scaleAspect: ScaleAspect) -> Void {
+    public func endState(scaleAspect: ScaleAspect) -> Void {
         if scaleAspect == ScaleAspect.Fill {
             transitionImage.contentMode = .ScaleAspectFill;
             transitionImage.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -151,13 +152,13 @@ class UIImageViewModeScaleAspect: UIView {
     
     //MARK: Override
     
-    override var frame: CGRect {
+    override public var frame: CGRect {
         didSet {
             transitionImage.frame = CGRectMake(0, 0, frame.size.width, frame.size.height)
         }
     }
     
-    override var contentMode: UIViewContentMode {
+    override public var contentMode: UIViewContentMode {
         get {
             return transitionImage.contentMode
         }

@@ -1,5 +1,4 @@
 language: objective-c
-os: osx
 osx_image: xcode7.3
 xcode_project: Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj 
 xcode_scheme: UIImageViewModeScaleAspectTests

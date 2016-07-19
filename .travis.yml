@@ -3,6 +3,6 @@ osx_image: xcode7.3
 xcode_project: Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj 
 xcode_scheme: UIImageViewModeScaleAspect
 script: 
-        - xcodebuild -project ./Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj -scheme UIImageViewModeScaleAspect -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+        - xcodebuild -project ./Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj -scheme UIImageViewModeScaleAspect -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 5,OS=9.3' build test
 after_success:
         - bash <(curl -s https://codecov.io/bash)  -J 'UIImageViewModeScaleAspect'

@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/VivienCormier/UIImageViewModeScaleAspect.svg)](https://travis-ci.org/VivienCormier/UIImageViewModeScaleAspect)
+[![codecov](https://codecov.io/gh/VivienCormier/UIImageViewModeScaleAspect/branch/master/graph/badge.svg)](https://codecov.io/gh/VivienCormier/UIImageViewModeScaleAspect)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 UIImageViewModeScaleAspect (1.4)

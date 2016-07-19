@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,6 +36,16 @@
                BlueprintIdentifier = "4D37350A1D2D84BD00645D3F"
                BuildableName = "UIImageViewModeScaleAspectTests.xctest"
                BlueprintName = "UIImageViewModeScaleAspectTests"
+               ReferencedContainer = "container:UIImageViewModeScaleAspect.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4D3735151D2D84BD00645D3F"
+               BuildableName = "UIImageViewModeScaleAspectUITests.xctest"
+               BlueprintName = "UIImageViewModeScaleAspectUITests"
                ReferencedContainer = "container:UIImageViewModeScaleAspect.xcodeproj">
             </BuildableReference>
          </TestableReference>

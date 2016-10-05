@@ -1,9 +1,9 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 xcode_project: Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj
 xcode_scheme: UIImageViewModeScaleAspect
 env:
-  global: 
+  global:
     - FRAMEWORK_NAME=UIImageViewModeScaleAspect
 before_install:
   - brew update

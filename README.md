@@ -6,7 +6,7 @@ UIImageViewModeScaleAspect (2.0)
 ================================
 
 <p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>
-<a href="http://www.viviencormier.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
+<a href="http://ios-developer.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
 
 Compatible Swift 3.0
 

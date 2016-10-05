@@ -13,8 +13,10 @@
 		4D3735021D2D84BD00645D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3735011D2D84BD00645D3F /* Assets.xcassets */; };
 		4D3735051D2D84BD00645D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3735031D2D84BD00645D3F /* LaunchScreen.storyboard */; };
 		4D37351B1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37351A1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift */; };
-		4D37353F1D3803DF00645D3F /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37352C1D2D854400645D3F /* UIImageViewModeScaleAspect.swift */; };
 		4D3735411D38041700645D3F /* UIImageViewModeScaleAspectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37350F1D2D84BD00645D3F /* UIImageViewModeScaleAspectTests.swift */; };
+		4DD9AE941DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
+		4DD9AE951DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
+		4DD9AE961DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,7 @@
 		4D3735161D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIImageViewModeScaleAspectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D37351A1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewModeScaleAspectUITests.swift; sourceTree = "<group>"; };
 		4D37351C1D2D84BD00645D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D37352C1D2D854400645D3F /* UIImageViewModeScaleAspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewModeScaleAspect.swift; sourceTree = "<group>"; };
+		4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewModeScaleAspect.swift; path = ../../../UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,7 @@
 				4D3735011D2D84BD00645D3F /* Assets.xcassets */,
 				4D3735031D2D84BD00645D3F /* LaunchScreen.storyboard */,
 				4D3735061D2D84BD00645D3F /* Info.plist */,
-				4D37352C1D2D854400645D3F /* UIImageViewModeScaleAspect.swift */,
+				4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */,
 			);
 			path = UIImageViewModeScaleAspect;
 			sourceTree = "<group>";
@@ -262,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D37353F1D3803DF00645D3F /* UIImageViewModeScaleAspect.swift in Sources */,
+				4DD9AE941DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */,
 				4D3734FD1D2D84BD00645D3F /* ViewController.swift in Sources */,
 				4D3734FB1D2D84BD00645D3F /* AppDelegate.swift in Sources */,
 			);
@@ -272,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD9AE951DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */,
 				4D3735411D38041700645D3F /* UIImageViewModeScaleAspectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD9AE961DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */,
 				4D37351B1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

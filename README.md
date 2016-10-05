@@ -1,10 +1,14 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Twitter: @VivienCormier](https://img.shields.io/badge/contact-@VivienCormier-blue.svg?style=flat)](https://twitter.com/VivienCormier)
+[![Build Status](https://travis-ci.org/VivienCormier/UIImageViewModeScaleAspect.svg)](https://travis-ci.org/VivienCormier/UIImageViewModeScaleAspect)
+[![codecov](https://codecov.io/gh/VivienCormier/UIImageViewModeScaleAspect/branch/master/graph/badge.svg)](https://codecov.io/gh/VivienCormier/UIImageViewModeScaleAspect)
 
-UIImageViewModeScaleAspect (1.5)
+UIImageViewModeScaleAspect (2.0)
 ================================
 
 <p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>
-<a href="http://www.viviencormier.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
+<a href="http://ios-developer.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
+
+Compatible Swift 3.0
 
 Screenshot & Demo Video
 -----------------------
@@ -18,73 +22,60 @@ Screenshot & Demo Video
 How To Get Started
 ------------------
 
-<p>Use Pod (or download and add "UIImageViewModeScaleAspect.h" and "UIImageViewModeScaleAspect.m" in your xcodeprojet.) : </p>
+<p>Use Pod (or download and add "UIImageViewModeScaleAspect.swift" in your xcodeprojet.) : </p>
 
 ``` objective-c
 pod 'UIImageViewModeScaleAspect'
 ```
 
-<p>Import the .h file :</p>
-``` objective-c
-#import "UIImageViewModeScaleAspect.h"
-```
-
 <p>Init the UIImageViewModeScaleAspect. Important ! Do not forget to init the contentMode :</p>
-``` objective-c
-UIImageViewModeScaleAspect *myImage = [[UIImageViewModeScaleAspect alloc]initWithFrame:CGRectMake(0, 100, 200, 100)];
-myImage.contentMode = UIViewContentModeScaleAspectFill; // Add the first contentMode
-myImage.image = [UIImage imageNamed:@"becomeapanda_tumblr_com"];
-[self.view addSubview:myImage];
+``` swift
+let myImage = UIImageViewModeScaleAspect(frame: CGRect(x: 0, y: 100, width: 200, height: 100))
+myImage.contentMode = .scaleAspectFill // Add the first contentMode
+myImage.image = UIImage(named: "Octocat")
+view.addSubview(myImage)
 ```
 
 Automatic animation
 -------------------
 
 <p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
-``` objective-c
-[myImage animateToScaleAspectFitToFrame:CGRectMake(0, 0, 200, 200) WithDuration:0.4f afterDelay:0.0f];
+``` swift
+myImage.animate( .fit, frame: CGRect(x: 0, y: 0, width: 200, height: 200), duration: 0.4)
 ```
 
 <p>For convert UIViewContentModeScaleAspectFit to UIViewContentModeScaleAspectFill :</p>
-``` objective-c
-[myImage animateToScaleAspectFillToFrame:CGRectMake(0, 0, 200, 200) WithDuration:0.4f afterDelay:0.0f];
+``` swift
+myImage.animate( .fill, frame: CGRect(x: 0, y: 0, width: 200, height: 200), duration: 0.4)
 ```
 
 Manual animation
 ----------------
 
 <p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
-``` objective-c
-[myImage initToScaleAspectFillToFrame:CGRectMake(0, 100, 200, 100)];
-        
-[UIView animateWithDuration:0.4f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction
-                 animations:^{
-                     //
-                     // Others Animation
-                     //
-                     [myImage animaticToScaleAspectFill];
-                     //
-                     // Others Animation
-                     //
-                 } completion:^(BOOL finished) {
-                     [myImage animateFinishToScaleAspectFill];
-                 }];
+``` swift
+myImage.initialeState(.fit, newFrame: CGRect(x: 0, y: 100, width: 200, height: 100))
+
+UIView.animate(withDuration: 0,4, delay: 0, options: .allowAnimatedContent, animations: {
+  //
+  // Others Animation
+  //
+  myImage.transitionState(.fit)
+}, completion: { (finished) in
+  myImage.endState(.fit)
+})
 ```
 
 <p>For convert UIViewContentModeScaleAspectFit to UIViewContentModeScaleAspectFill :</p>
-``` objective-c
-[myImage initToScaleAspectFitToFrame:CGRectMake(0, 0, 200, 200)];
-        
-[UIView animateWithDuration:0.4f delay:0.0f options:UIViewAnimationOptionAllowUserInteraction
-                 animations:^{
-                     //
-                     // Others Animation
-                     //
-                     [myImage animaticToScaleAspectFit];
-                     //
-                     // Others Animation
-                     //
-                 } completion:^(BOOL finished) {
-                     [myImage animateFinishToScaleAspectFit];
-                 }];
+``` swift
+myImage.initialeState(.fill, newFrame: CGRect(x: 0, y: 100, width: 200, height: 100))
+
+UIView.animate(withDuration: 0,4, delay: 0, options: .allowAnimatedContent, animations: {
+  //
+  // Others Animation
+  //
+  myImage.transitionState(.fill)
+}, completion: { (finished) in
+  myImage.endState(.fill)
+})
 ```

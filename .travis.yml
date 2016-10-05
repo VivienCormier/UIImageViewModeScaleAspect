@@ -1,0 +1,29 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj
+xcode_scheme: UIImageViewModeScaleAspect
+env:
+  global:
+    - FRAMEWORK_NAME=UIImageViewModeScaleAspect
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+script:
+- xcodebuild -project ./Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect.xcodeproj
+  -scheme UIImageViewModeScaleAspect -sdk iphonesimulator -destination 'platform=iOS
+  Simulator,name=iPhone 5,OS=9.3' build test
+after_success:
+- bash <(curl -s https://codecov.io/bash)  -J 'UIImageViewModeScaleAspect'
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: H4nDQZsMipi51+bgMcDCibkV7nnUowsFh9Y4p3aklr5qQe2uVIv1/yw4ohui1tJvwDywfOxwbOpJWhsRsE9Po+1dcv2HRhsxYcc2R5aFsrQcyLO/i3lhJzMxhlxU5M70e23NfICUSkBc3s5nxRGBvduWif7A/zz9xmkrW2wJSXnE4tpF5pzuAbdi8bm7I/S0szgEpgdED024G3EmG0RT8wWPc66W5wPUtANTLnxj31BYFJB6DrI9cNwuKtSKwQ4BeBZ52QVAl44pVm1GAk9bcP5GrdTOrh29SkVe3arTgwsmGA8xm1dbFOcCsDVY8J9cJ1bQUwvEB8YwTYW1DfgXGw7t/9KfmRNiYa0n5KygmM10Xyo3cjvSdfhQhBtV2ByJzTlvHN8LxZtwKvm49X59YE6AU3GO6ILH8gWuzNce/5mKi6YIaFMvJ5AzhzK0ufHYsIBAKcoHUG8yto7+aHj0a5/VF68TYesd6t+pyr18EYaJueZ3nyY9gJlB2M7V0jXFMHJuUG5aW3wcxuLQ0h6v+IsYs84RdGkbrBUUDjPIRM0nQhOitOyfvUGGK3qeV0sJoS4tTTnfHHKVFChisxmMRd5AxMzp4kGvgLCxG5tjY2eTEXW1gPHJzP2vMjve6m0QG9mF8xqzrnSrIqAw/IgVovrUalNR4l9vOzVT6XCWQ4Q=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: VivienCormier/UIImageViewModeScaleAspect
+    branch: Swift
+    tags: true

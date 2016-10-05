@@ -15,8 +15,6 @@
 		4D37351B1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37351A1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift */; };
 		4D3735411D38041700645D3F /* UIImageViewModeScaleAspectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37350F1D2D84BD00645D3F /* UIImageViewModeScaleAspectTests.swift */; };
 		4DD9AE941DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
-		4DD9AE951DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
-		4DD9AE961DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9AE931DA517F000E50B40 /* UIImageViewModeScaleAspect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD9AE951DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */,
 				4D3735411D38041700645D3F /* UIImageViewModeScaleAspectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DD9AE961DA517F000E50B40 /* UIImageViewModeScaleAspect.swift in Sources */,
 				4D37351B1D2D84BD00645D3F /* UIImageViewModeScaleAspectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

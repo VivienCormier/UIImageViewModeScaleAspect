@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let myImage = UIImageViewModeScaleAspect(frame: CGRectMake(0, 100, 200, 100))
+    let myImage = UIImageViewModeScaleAspect(frame: CGRect(x: 0, y: 100, width: 200, height: 100))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
         myImage.image = UIImage(named: "Octocat")
-        myImage.contentMode = .ScaleAspectFill
-        myImage.backgroundColor = UIColor.blackColor()
+        myImage.contentMode = .scaleAspectFill
+        myImage.backgroundColor = UIColor.black
         view.addSubview(myImage)
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.animateImage))
@@ -28,10 +28,10 @@ class ViewController: UIViewController {
 
     func animateImage() {
 
-        if myImage.contentMode == .ScaleAspectFill {
-            myImage.animate( .Fit, frame: CGRectMake(0, 0, view.frame.width, view.frame.height), duration: 0.4)
+        if myImage.contentMode == .scaleAspectFill {
+            myImage.animate( .fit, frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), duration: 0.4)
         } else {
-            myImage.animate( .Fill, frame: CGRectMake(0, 100, 200, 100), duration: 0.4)
+            myImage.animate( .fill, frame: CGRect(x: 0, y: 100, width: 200, height: 100), duration: 0.4)
         }
 
     }

@@ -26,117 +26,117 @@ class UIImageViewModeScaleAspectTests: XCTestCase {
 
     func testScaleAspectFitToFillWithLandscapeImage() {
 
-        let initialeFrame = CGRectMake(0, 0, 100, 100)
-        let finalFrame = CGRectMake(0, 0, 100, 100)
+        let initialeFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let finalFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
 
         let imageViewModeScaleAscpect = UIImageViewModeScaleAspect(frame: initialeFrame)
         imageViewModeScaleAscpect.image = imageLandscape
-        imageViewModeScaleAscpect.contentMode = .ScaleAspectFit
+        imageViewModeScaleAscpect.contentMode = .scaleAspectFit
 
-        imageViewModeScaleAscpect.initialeState(.Fill, newFrame: finalFrame)
+        imageViewModeScaleAscpect.initialeState(.fill, newFrame: finalFrame)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, initialeFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, initialeFrame.height)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.transitionState(.Fill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.transitionState(.fill)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, imageViewModeScaleAscpect.image?.size.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, imageViewModeScaleAscpect.image?.size.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, -50)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.endState(.Fill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.endState(.fill)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFill)
 
     }
 
     func testScaleAspectFillToFitWithLandscapeImage() {
 
-        let initialeFrame = CGRectMake(0, 0, 100, 100)
-        let finalFrame = CGRectMake(0, 0, 100, 100)
+        let initialeFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let finalFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
 
         let imageViewModeScaleAscpect = UIImageViewModeScaleAspect(frame: initialeFrame)
         imageViewModeScaleAscpect.image = imageLandscape
-        imageViewModeScaleAscpect.contentMode = .ScaleAspectFill
+        imageViewModeScaleAscpect.contentMode = .scaleAspectFill
 
-        imageViewModeScaleAscpect.initialeState(.Fit, newFrame: finalFrame)
+        imageViewModeScaleAscpect.initialeState(.fit, newFrame: finalFrame)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, imageViewModeScaleAscpect.image?.size.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, imageViewModeScaleAscpect.image?.size.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, -50)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.transitionState(.Fit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.transitionState(.fit)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.endState(.Fit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.endState(.fit)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
 
     }
 
     func testScaleAspectFitToFillWithPortraitImage() {
 
-        let initialeFrame = CGRectMake(0, 0, 100, 100)
-        let finalFrame = CGRectMake(0, 0, 100, 100)
+        let initialeFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let finalFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
 
         let imageViewModeScaleAscpect = UIImageViewModeScaleAspect(frame: initialeFrame)
         imageViewModeScaleAscpect.image = imagePortrait
-        imageViewModeScaleAscpect.contentMode = .ScaleAspectFit
+        imageViewModeScaleAscpect.contentMode = .scaleAspectFit
 
-        imageViewModeScaleAscpect.initialeState(.Fill, newFrame: finalFrame)
+        imageViewModeScaleAscpect.initialeState(.fill, newFrame: finalFrame)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, initialeFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, initialeFrame.height)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.transitionState(.Fill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.transitionState(.fill)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, imageViewModeScaleAscpect.image?.size.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, imageViewModeScaleAscpect.image?.size.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, -50)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.endState(.Fill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.endState(.fill)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFill)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFill)
 
     }
 
     func testScaleAspectFillToFitWithPortraitImage() {
 
-        let initialeFrame = CGRectMake(0, 0, 100, 100)
-        let finalFrame = CGRectMake(0, 0, 100, 100)
+        let initialeFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let finalFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
 
         let imageViewModeScaleAscpect = UIImageViewModeScaleAspect(frame: initialeFrame)
         imageViewModeScaleAscpect.image = imagePortrait
-        imageViewModeScaleAscpect.contentMode = .ScaleAspectFill
+        imageViewModeScaleAscpect.contentMode = .scaleAspectFill
 
-        imageViewModeScaleAscpect.initialeState(.Fit, newFrame: finalFrame)
+        imageViewModeScaleAscpect.initialeState(.fit, newFrame: finalFrame)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, imageViewModeScaleAscpect.image?.size.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, imageViewModeScaleAscpect.image?.size.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, -50)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.transitionState(.Fit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.transitionState(.fit)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
-        imageViewModeScaleAscpect.endState(.Fit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
+        imageViewModeScaleAscpect.endState(.fit)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.width, finalFrame.width)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.height, finalFrame.height)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.x, 0)
         XCTAssertEqual(imageViewModeScaleAscpect.transitionImage.frame.origin.y, 0)
-        XCTAssert(imageViewModeScaleAscpect.contentMode == .ScaleAspectFit)
+        XCTAssert(imageViewModeScaleAscpect.contentMode == .scaleAspectFit)
 
     }
     

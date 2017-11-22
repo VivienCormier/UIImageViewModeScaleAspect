@@ -5,7 +5,7 @@
 UIImageViewModeScaleAspect (2.0)
 ================================
 
-<p>Create animation of a UIImageView between two contentMode ( UIViewContentModeScaleAspectFill / UIViewContentModeScaleAspectFit )</p>
+Create animation of a UIImageView between two contentMode ( `UIViewContentModeScaleAspectFill` / `UIViewContentModeScaleAspectFit` )
 <a href="http://ios-developer.fr/" target="_blank">My WebSite</a> - <a href="https://twitter.com/VivienCormier" target="_blank">My Twitter</a>
 
 Compatible Swift 3.0
@@ -13,7 +13,7 @@ Compatible Swift 3.0
 Screenshot & Demo Video
 -----------------------
 
-<p>To see a demo video, click <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">here</a></p>
+To see a demo video, click <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">here</a>
 <a href="http://www.youtube.com/watch?v=vZYbQ0Yt8eQ" target="_blank">
   <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_1.png?raw=true" width="500" height="391" />
   <img alt="ScreenShot Demo Video" src="https://github.com/VivienCormier/UIImageViewModeScaleAspect/blob/master/Example/UIImageViewModeScaleAspect/UIImageViewModeScaleAspect/example_2.png?raw=true" width="500" height="391" />
@@ -22,14 +22,15 @@ Screenshot & Demo Video
 How To Get Started
 ------------------
 
-<p>Use Pod (or download and add "UIImageViewModeScaleAspect.swift" in your xcodeprojet.) : </p>
+Use Pod (or download and add "UIImageViewModeScaleAspect.swift" in your xcodeproject.): 
 
-``` objective-c
+```objective-c
 pod 'UIImageViewModeScaleAspect'
 ```
 
-<p>Init the UIImageViewModeScaleAspect. Important ! Do not forget to init the contentMode :</p>
-``` swift
+Init the UIImageViewModeScaleAspect. Important ! Do not forget to init the contentMode :
+
+```swift
 let myImage = UIImageViewModeScaleAspect(frame: CGRect(x: 0, y: 100, width: 200, height: 100))
 myImage.contentMode = .scaleAspectFill // Add the first contentMode
 myImage.image = UIImage(named: "Octocat")
@@ -39,21 +40,24 @@ view.addSubview(myImage)
 Automatic animation
 -------------------
 
-<p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
-``` swift
+For convert `UIViewContentModeScaleAspectFill` to `UIViewContentModeScaleAspectFit`:
+
+```swift
 myImage.animate( .fit, frame: CGRect(x: 0, y: 0, width: 200, height: 200), duration: 0.4)
 ```
 
-<p>For convert UIViewContentModeScaleAspectFit to UIViewContentModeScaleAspectFill :</p>
-``` swift
+For convert `UIViewContentModeScaleAspectFit` to `UIViewContentModeScaleAspectFill`:
+
+```swift
 myImage.animate( .fill, frame: CGRect(x: 0, y: 0, width: 200, height: 200), duration: 0.4)
 ```
 
 Manual animation
 ----------------
 
-<p>For convert UIViewContentModeScaleAspectFill to UIViewContentModeScaleAspectFit :</p>
-``` swift
+For convert `UIViewContentModeScaleAspectFill` to `UIViewContentModeScaleAspectFit`:
+
+```swift
 myImage.initialeState(.fit, newFrame: CGRect(x: 0, y: 100, width: 200, height: 100))
 
 UIView.animate(withDuration: 0,4, delay: 0, options: .allowAnimatedContent, animations: {
@@ -66,8 +70,9 @@ UIView.animate(withDuration: 0,4, delay: 0, options: .allowAnimatedContent, anim
 })
 ```
 
-<p>For convert UIViewContentModeScaleAspectFit to UIViewContentModeScaleAspectFill :</p>
-``` swift
+For convert `UIViewContentModeScaleAspectFit` to `UIViewContentModeScaleAspectFill`:
+
+```swift
 myImage.initialeState(.fill, newFrame: CGRect(x: 0, y: 100, width: 200, height: 100))
 
 UIView.animate(withDuration: 0,4, delay: 0, options: .allowAnimatedContent, animations: {
